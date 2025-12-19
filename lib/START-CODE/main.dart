@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import '..ui/groceries/grocery_list.dart';
+import 'package:quiz/START-CODE/data/mock_grocery_repository.dart';
+import 'package:quiz/START-CODE/ui/groceries/grocery_list.dart';
+
+
+final data = dummyGroceryItems;
 
 
 void main() {
@@ -24,7 +28,7 @@ class MyApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: const Color.fromARGB(255, 50, 58, 60),
       ),
-      home: const GroceryList(),
+      home: GroceryList(data: data),
     );
   }
 }
